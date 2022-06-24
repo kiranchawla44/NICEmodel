@@ -9,7 +9,7 @@
     quintile_c   = Parameter(index=[time, regions, quintiles]) # Post-damage, post-abatement cost quintile consumption (thousands 2005 USD yr⁻¹).
 
     welfare    = Variable()                                    # Total economic welfare (concave transform of non-prioritarian welfare).
-    non_prioritarian_welfare    = Variable()                                    # concave transform of consumption.
+    prioritarian_welfare    = Variable()                                    # concave transform of consumption.
 
 
     function run_timestep(p, v, d, t)
