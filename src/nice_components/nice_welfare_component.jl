@@ -16,7 +16,7 @@
 
         if is_first(t)
             # Calculate period 1 welfare.
-            v.prioritarian_welfare = (p.quintile_c[t,:,:] .^ (1.0 - p.eta)) ./ (1.0 - p.eta)).^ (1.0 - p.eta)) ./ (1.0 - p.eta)
+            v.prioritarian_welfare = (p.quintile_c[t,:,:] .^ (1.0 - p.eta) ./ (1.0 - p.eta)).^ (1.0 - p.eta) ./ (1.0 - p.eta)
             v.welfare = sum((v.prioritarian_welfare .* p.quintile_pop[t,:]) / (1.0 + p.rho)^(10*(t.t-1))            
         else
             # Calculate cummulative welfare over time.
